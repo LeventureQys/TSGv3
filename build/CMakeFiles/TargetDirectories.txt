@@ -1,0 +1,8 @@
+E:/Leventure/WorkShop/TSGv3.0.0/build/CMakeFiles/ALL_BUILD.dir
+E:/Leventure/WorkShop/TSGv3.0.0/build/CMakeFiles/ZERO_CHECK.dir
+E:/Leventure/WorkShop/TSGv3.0.0/build/TSG_MainServer/CMakeFiles/TSG_MainServer.dir
+E:/Leventure/WorkShop/TSGv3.0.0/build/TSG_MainServer/CMakeFiles/ALL_BUILD.dir
+E:/Leventure/WorkShop/TSGv3.0.0/build/TSG_Dialog/CMakeFiles/TSG_Dialog.dir
+E:/Leventure/WorkShop/TSGv3.0.0/build/TSG_Dialog/CMakeFiles/ALL_BUILD.dir
+E:/Leventure/WorkShop/TSGv3.0.0/build/TSG_NetWork/CMakeFiles/TSG_NetWork.dir
+E:/Leventure/WorkShop/TSGv3.0.0/build/TSG_NetWork/CMakeFiles/ALL_BUILD.dir

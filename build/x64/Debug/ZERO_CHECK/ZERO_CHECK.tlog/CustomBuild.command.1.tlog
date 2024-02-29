@@ -1,0 +1,10 @@
+^E:\LEVENTURE\WORKSHOP\TSGV3.0.0\BUILD\CMAKEFILES\B3A88D48DA5A31235A61A2D41022DBCA\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Leventure/WorkShop/TSGv3.0.0 -BE:/Leventure/WorkShop/TSGv3.0.0/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/Leventure/WorkShop/TSGv3.0.0/build/TSGv3.0.0.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,11 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeParseArguments.cmake
+C:/ProgramData/anaconda3/Library/lib/cmake/Qt5/Qt5Config.cmake
+C:/ProgramData/anaconda3/Library/lib/cmake/Qt5/Qt5ConfigVersion.cmake
+C:/ProgramData/anaconda3/Library/lib/cmake/Qt5/Qt5ModuleLocation.cmake
+C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Core/Qt5CoreConfig.cmake
+C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake
+C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake
+C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake
+C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Core/Qt5CoreMacros.cmake
+E:/Leventure/WorkShop/TSGv3.0.0/TSG_Dialog/CMakeLists.txt

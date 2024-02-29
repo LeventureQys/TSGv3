@@ -1,0 +1,10 @@
+^E:\LEVENTURE\WORKSHOP\TSGV3.0.0\TSG_MAINSERVER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Leventure/WorkShop/TSGv3.0.0 -BE:/Leventure/WorkShop/TSGv3.0.0/build --check-stamp-file E:/Leventure/WorkShop/TSGv3.0.0/build/TSG_MainServer/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
