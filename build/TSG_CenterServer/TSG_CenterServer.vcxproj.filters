@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\src\TSG_CenterServer.cpp">
+    <ClCompile Include="D:\WorkShop\github\TSGv3\TSG_CenterServer\src\TSG_CenterServer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\src\TSG_RegeditEditor.cpp">
+    <ClCompile Include="D:\WorkShop\github\TSGv3\TSG_CenterServer\src\TSG_RegeditEditor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\src\TSG_NetServer.cpp">
+    <ClCompile Include="D:\WorkShop\github\TSGv3\TSG_CenterServer\src\TSG_NetServer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\src\MissionController.cpp">
+    <ClCompile Include="D:\WorkShop\github\TSGv3\TSG_CenterServer\src\MissionController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\src\DeviceParamController.cpp">
+    <ClCompile Include="D:\WorkShop\github\TSGv3\TSG_CenterServer\src\DeviceParamController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\CMakeLists.txt" />
+    <CustomBuild Include="D:\WorkShop\github\TSGv3\TSG_CenterServer\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{25DB004E-180F-3596-8EE4-90523B850FE2}</UniqueIdentifier>
+      <UniqueIdentifier>{0C40E614-4BA2-3F97-A297-9AF566353013}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -2,7 +2,7 @@
 MissionController::MissionController(QObject* parent) : TSG_Framework(parent, str_classname)
 {
 }
-void MissionController::Init(const QString& ApplicationPath)
+bool MissionController::Init(const QString& ApplicationPath)
 {
 	//中心服务器初始化尝试
 	QDir dir(ApplicationPath);
@@ -16,14 +16,14 @@ void MissionController::Init(const QString& ApplicationPath)
 
 	if (!dir.exists()) {
 		this->CallErrorMessage("Init - path not exist!");
-		return;
+		return false;
 	}
 
 	if (!dir.cd(TopMissionFolderName)) {
 		//如果不存在Scan文件夹，则创建一个
 		if (!dir.mkpath(TopMissionFolderName)) {
 			this->CallErrorMessage("Init - Can't make a Scan folder");
-			return;
+			return false ;
 		}
 		dir.cd(TopMissionFolderName);
 	}
@@ -31,7 +31,7 @@ void MissionController::Init(const QString& ApplicationPath)
 	//此时已经进入到Mission文件夹内了
 	this->str_CurrentMissionPath = dir.absolutePath();
 	this->getMissionList();
-
+	return true;
 }
 
 QList<QString> MissionController::getMissionList()

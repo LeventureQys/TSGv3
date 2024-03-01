@@ -1,9 +1,0 @@
-﻿  Building Custom Rule E:/Leventure/WorkShop/TSGv3.0.0/TSG_MainServer/CMakeLists.txt
-  CMake is re-running because E:/Leventure/WorkShop/TSGv3.0.0/build/TSG_MainServer/CMakeFiles/generate.stamp is out-of-date.
-    the file 'E:/Leventure/WorkShop/TSGv3.0.0/TSG_MainServer/CMakeLists.txt'
-    is newer than 'E:/Leventure/WorkShop/TSGv3.0.0/build/TSG_MainServer/CMakeFiles/generate.stamp.depend'
-    result='-1'
-  -- Selecting Windows SDK version 10.0.22621.0 to target Windows 10.0.19045.
-  -- Configuring done (0.1s)
-  -- Generating done (0.0s)
-  -- Build files have been written to: E:/Leventure/WorkShop/TSGv3.0.0/build

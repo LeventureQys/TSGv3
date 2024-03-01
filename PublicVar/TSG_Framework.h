@@ -1,5 +1,5 @@
 ﻿#include "qobject.h"
-
+#include "PublicVar.h"
 class TSG_Framework : public QObject {
 	Q_OBJECT
 public:

@@ -1,10 +1,10 @@
-﻿  Building Custom Rule E:/Leventure/WorkShop/TSGv3.0.0/TSG_NetWork/CMakeLists.txt
+﻿  Building Custom Rule D:/WorkShop/github/TSGv3/TSG_NetWork/CMakeLists.txt
   TSG_NetWork.cpp
   QtTcpBaseHandler.cpp
   QtTcpClientHandler.cpp
   QtTcpServerHandler.cpp
-E:\Leventure\WorkShop\TSGv3.0.0\TSG_NetWork\src\QtTcpServerHandler.cpp(139,43): warning C4302: “类型强制转换”: 从“QTcpSocket *”到“quint16”截断
-E:\Leventure\WorkShop\TSGv3.0.0\TSG_NetWork\src\QtTcpServerHandler.cpp(165,30): warning C4302: “类型强制转换”: 从“QTcpSocket *”到“quint16”截断
-E:\Leventure\WorkShop\TSGv3.0.0\TSG_NetWork\src\QtTcpServerHandler.cpp(192,32): warning C4302: “类型强制转换”: 从“QTcpSocket *”到“quint16”截断
+D:\WorkShop\github\TSGv3\TSG_NetWork\src\QtTcpServerHandler.cpp(146,43): warning C4302: “类型强制转换”: 从“QTcpSocket *”到“quint16”截断
+D:\WorkShop\github\TSGv3\TSG_NetWork\src\QtTcpServerHandler.cpp(172,30): warning C4302: “类型强制转换”: 从“QTcpSocket *”到“quint16”截断
+D:\WorkShop\github\TSGv3\TSG_NetWork\src\QtTcpServerHandler.cpp(199,32): warning C4302: “类型强制转换”: 从“QTcpSocket *”到“quint16”截断
   正在生成代码...
-  TSG_NetWork.vcxproj -> E:\Leventure\WorkShop\TSGv3.0.0\build\TSG_NetWork\Debug\TSG_NetWork.lib
+  TSG_NetWork.vcxproj -> D:\WorkShop\github\TSGv3\build\TSG_NetWork\Debug\TSG_NetWork.lib

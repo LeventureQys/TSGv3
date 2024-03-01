@@ -1,8 +1,8 @@
-E:/Leventure/WorkShop/Github/TSGv3/build/CMakeFiles/ALL_BUILD.dir
-E:/Leventure/WorkShop/Github/TSGv3/build/CMakeFiles/ZERO_CHECK.dir
-E:/Leventure/WorkShop/Github/TSGv3/build/TSG_CenterServer/CMakeFiles/TSG_CenterServer.dir
-E:/Leventure/WorkShop/Github/TSGv3/build/TSG_CenterServer/CMakeFiles/ALL_BUILD.dir
-E:/Leventure/WorkShop/Github/TSGv3/build/TSG_Dialog/CMakeFiles/TSG_Dialog.dir
-E:/Leventure/WorkShop/Github/TSGv3/build/TSG_Dialog/CMakeFiles/ALL_BUILD.dir
-E:/Leventure/WorkShop/Github/TSGv3/build/TSG_NetWork/CMakeFiles/TSG_NetWork.dir
-E:/Leventure/WorkShop/Github/TSGv3/build/TSG_NetWork/CMakeFiles/ALL_BUILD.dir
+D:/WorkShop/github/TSGv3/build/CMakeFiles/ALL_BUILD.dir
+D:/WorkShop/github/TSGv3/build/CMakeFiles/ZERO_CHECK.dir
+D:/WorkShop/github/TSGv3/build/TSG_CenterServer/CMakeFiles/TSG_CenterServer.dir
+D:/WorkShop/github/TSGv3/build/TSG_CenterServer/CMakeFiles/ALL_BUILD.dir
+D:/WorkShop/github/TSGv3/build/TSG_Dialog/CMakeFiles/TSG_Dialog.dir
+D:/WorkShop/github/TSGv3/build/TSG_Dialog/CMakeFiles/ALL_BUILD.dir
+D:/WorkShop/github/TSGv3/build/TSG_NetWork/CMakeFiles/TSG_NetWork.dir
+D:/WorkShop/github/TSGv3/build/TSG_NetWork/CMakeFiles/ALL_BUILD.dir

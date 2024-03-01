@@ -20,7 +20,7 @@ public:
 	/// 初始化
 	/// </summary>
 	/// <param name="ApplicationPath">应用程序路径</param>
-	void Init(const QString& ApplicationPath);
+	bool Init(const QString& ApplicationPath);
 
 	/// <summary>
 	/// 获得任务列表，调用时会刷新任务列表

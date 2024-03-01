@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>E:\Leventure\WorkShop\Github\TSGv3\build\x64\Debug\ZERO_CHECK</FullPath>
+      <FullPath>D:\WorkShop\github\TSGv3\build\x64\Debug\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>E:\Leventure\WorkShop\Github\TSGv3\build\x64\Debug\ALL_BUILD</FullPath>
+      <FullPath>D:\WorkShop\github\TSGv3\build\x64\Debug\ALL_BUILD</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
