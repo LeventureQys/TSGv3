@@ -40,6 +40,8 @@ public:
 	void SendMsg(const QByteArray& bytes, QString clnAddr = "", quint16 clnPort = 0);
 	QString getServerIp();
 	quint16 getServerPort();
+
+	bool isOpen();
 signals:
 	void Sig_NewConn(const QString& clnAddr, const quint16 clnPort, const quint16 port);
 	void Sig_NewDisConn(const QString& clnAddr, const quint16 clnPort);

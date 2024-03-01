@@ -1,8 +1,8 @@
-# Install script for directory: E:/Leventure/WorkShop/TSGv3.0.0/TSG_MainServer
+# Install script for directory: E:/Leventure/WorkShop/Github/TSGv3/TSG_MainServer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/TSGv3.0.0")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/TSGv3")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

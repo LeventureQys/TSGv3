@@ -30,9 +30,12 @@ C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake
 C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake
 C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake
 C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake
+C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Network/Qt5NetworkConfig.cmake
+C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake
+C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake
 C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake
 C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake
 C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake
 C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake
 C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake
-E:/Leventure/WorkShop/TSGv3.0.0/TSG_MainServer/CMakeLists.txt
+E:/Leventure/WorkShop/Github/TSGv3/TSG_MainServer/CMakeLists.txt

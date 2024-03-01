@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="E:\Leventure\WorkShop\TSGv3.0.0\build\CMakeFiles\b3a88d48da5a31235a61a2d41022dbca\generate.stamp.rule">
+    <CustomBuild Include="E:\Leventure\WorkShop\Github\TSGv3\build\CMakeFiles\a84b4c135896001108f83e3305728fab\generate.stamp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{0D26A46F-D30C-3EB0-8C78-2B54944ABCC3}</UniqueIdentifier>
+      <UniqueIdentifier>{003768B1-27B2-3AF3-88DF-CAB95F697654}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

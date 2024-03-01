@@ -124,7 +124,15 @@ QString QtTCPServerHandler::getServerIp() {
 	}
 	return QString();
 }
+bool QtTCPServerHandler::isOpen()
+{
+	if (this->m_pTcpServer == nullptr) {
+		return false;
+	}
 
+	return this->m_pTcpServer->isListening();
+
+}
 quint16 QtTCPServerHandler::getServerPort()
 {
 	if (this->m_pTcpServer != nullptr) {

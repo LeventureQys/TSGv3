@@ -1,6 +1,6 @@
-^E:\LEVENTURE\WORKSHOP\TSGV3.0.0\TSG_NETWORK\CMAKELISTS.TXT
+^E:\LEVENTURE\WORKSHOP\GITHUB\TSGV3\TSG_NETWORK\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SE:/Leventure/WorkShop/TSGv3.0.0 -BE:/Leventure/WorkShop/TSGv3.0.0/build --check-stamp-file E:/Leventure/WorkShop/TSGv3.0.0/build/TSG_NetWork/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Leventure/WorkShop/Github/TSGv3 -BE:/Leventure/WorkShop/Github/TSGv3/build --check-stamp-file E:/Leventure/WorkShop/Github/TSGv3/build/TSG_NetWork/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
