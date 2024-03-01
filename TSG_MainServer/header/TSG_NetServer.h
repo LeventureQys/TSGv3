@@ -31,6 +31,8 @@
 //	/// <param name="blnSuccess"></param>
 //	void AcceptCMD_GUI(bool blnSuccess);	//接收命令结果
 //	bool isOpen();
+//private slots:
+//	void ReceiveTCP(const QString& clnAddr, const quint16 clnPort, const QByteArray& bytes);
 //Q_SIGNALS:
 //	void Sig_Connected(const QString& qsServerAddr);
 //	void Sig_Disconnect(const QString& qsServerAddr);
@@ -42,6 +44,8 @@
 //private:
 //
 //	QtTCPServerHandler* ptr_server;
-//	bool m_blnIsOpen;
-//
+//	bool blnInit = false;
+//	const QString str_class_name = "NetCore";
+//	void CallDialog(const QString& FunctionName, const QString& Message);
+//	void CallError(const QString& FunctionName, const QString& Message);
 //};
