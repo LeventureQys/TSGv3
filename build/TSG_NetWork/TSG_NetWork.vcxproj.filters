@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\WorkShop\github\TSGv3\TSG_NetWork\src\TSG_NetWork.cpp">
+    <ClCompile Include="E:\Leventure\WorkShop\Github\TSGv3\TSG_NetWork\src\TSG_NetWork.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\WorkShop\github\TSGv3\TSG_NetWork\src\QtTcpBaseHandler.cpp">
+    <ClCompile Include="E:\Leventure\WorkShop\Github\TSGv3\TSG_NetWork\src\QtTcpBaseHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\WorkShop\github\TSGv3\TSG_NetWork\src\QtTcpClientHandler.cpp">
+    <ClCompile Include="E:\Leventure\WorkShop\Github\TSGv3\TSG_NetWork\src\QtTcpClientHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\WorkShop\github\TSGv3\TSG_NetWork\src\QtTcpServerHandler.cpp">
+    <ClCompile Include="E:\Leventure\WorkShop\Github\TSGv3\TSG_NetWork\src\QtTcpServerHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\WorkShop\github\TSGv3\TSG_NetWork\CMakeLists.txt" />
+    <CustomBuild Include="E:\Leventure\WorkShop\Github\TSGv3\TSG_NetWork\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{0C40E614-4BA2-3F97-A297-9AF566353013}</UniqueIdentifier>
+      <UniqueIdentifier>{25DB004E-180F-3596-8EE4-90523B850FE2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

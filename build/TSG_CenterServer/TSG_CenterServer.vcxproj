@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{0689515E-CB4B-3E9B-BFB3-AA036018BB52}</ProjectGuid>
+    <ProjectGuid>{8B3E800F-4DAA-38D8-8D45-0D89420FA372}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -59,26 +59,26 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\WorkShop\github\TSGv3\build\TSG_CenterServer\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Leventure\WorkShop\Github\TSGv3\build\TSG_CenterServer\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">TSG_CenterServer.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">TSG_CenterServer</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\WorkShop\github\TSGv3\build\TSG_CenterServer\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Leventure\WorkShop\Github\TSGv3\build\TSG_CenterServer\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">TSG_CenterServer.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">TSG_CenterServer</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\WorkShop\github\TSGv3\build\TSG_CenterServer\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Leventure\WorkShop\Github\TSGv3\build\TSG_CenterServer\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">TSG_CenterServer.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">TSG_CenterServer</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\WorkShop\github\TSGv3\build\TSG_CenterServer\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Leventure\WorkShop\Github\TSGv3\build\TSG_CenterServer\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">TSG_CenterServer.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">TSG_CenterServer</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\WorkShop\github\TSGv3\TSG_CenterServer\include;D:\WorkShop\github\TSGv3\TSG_CenterServer\..\PublicVar;D:\WorkShop\github\TSGv3\TSG_CenterServer\..\TSG_NetWork\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\include;E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\..\PublicVar;E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\..\TSG_NetWork\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /external:I "C:/ProgramData/anaconda3/Library/include/qt" /external:I "C:/ProgramData/anaconda3/Library/include/qt/QtCore" /external:I "C:/ProgramData/anaconda3/Library/./mkspecs/win32-msvc" /external:I "C:/ProgramData/anaconda3/Library/include/qt/QtWidgets" /external:I "C:/ProgramData/anaconda3/Library/include/qt/QtGui" /external:I "C:/ProgramData/anaconda3/Library/include/qt/QtANGLE" /external:I "C:/ProgramData/anaconda3/Library/include/qt/QtNetwork"</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -98,10 +98,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;QT_CORE_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\WorkShop\github\TSGv3\TSG_CenterServer\include;D:\WorkShop\github\TSGv3\TSG_CenterServer\..\PublicVar;D:\WorkShop\github\TSGv3\TSG_CenterServer\..\TSG_NetWork\header;C:\ProgramData\anaconda3\Library\include\qt;C:\ProgramData\anaconda3\Library\include\qt\QtCore;C:\ProgramData\anaconda3\Library\.\mkspecs\win32-msvc;C:\ProgramData\anaconda3\Library\include\qt\QtWidgets;C:\ProgramData\anaconda3\Library\include\qt\QtGui;C:\ProgramData\anaconda3\Library\include\qt\QtANGLE;C:\ProgramData\anaconda3\Library\include\qt\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\include;E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\..\PublicVar;E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\..\TSG_NetWork\header;C:\ProgramData\anaconda3\Library\include\qt;C:\ProgramData\anaconda3\Library\include\qt\QtCore;C:\ProgramData\anaconda3\Library\.\mkspecs\win32-msvc;C:\ProgramData\anaconda3\Library\include\qt\QtWidgets;C:\ProgramData\anaconda3\Library\include\qt\QtGui;C:\ProgramData\anaconda3\Library\include\qt\QtANGLE;C:\ProgramData\anaconda3\Library\include\qt\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\WorkShop\github\TSGv3\TSG_CenterServer\include;D:\WorkShop\github\TSGv3\TSG_CenterServer\..\PublicVar;D:\WorkShop\github\TSGv3\TSG_CenterServer\..\TSG_NetWork\header;C:\ProgramData\anaconda3\Library\include\qt;C:\ProgramData\anaconda3\Library\include\qt\QtCore;C:\ProgramData\anaconda3\Library\.\mkspecs\win32-msvc;C:\ProgramData\anaconda3\Library\include\qt\QtWidgets;C:\ProgramData\anaconda3\Library\include\qt\QtGui;C:\ProgramData\anaconda3\Library\include\qt\QtANGLE;C:\ProgramData\anaconda3\Library\include\qt\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\include;E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\..\PublicVar;E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\..\TSG_NetWork\header;C:\ProgramData\anaconda3\Library\include\qt;C:\ProgramData\anaconda3\Library\include\qt\QtCore;C:\ProgramData\anaconda3\Library\.\mkspecs\win32-msvc;C:\ProgramData\anaconda3\Library\include\qt\QtWidgets;C:\ProgramData\anaconda3\Library\include\qt\QtGui;C:\ProgramData\anaconda3\Library\include\qt\QtANGLE;C:\ProgramData\anaconda3\Library\include\qt\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -114,7 +114,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\WorkShop\github\TSGv3\TSG_CenterServer\include;D:\WorkShop\github\TSGv3\TSG_CenterServer\..\PublicVar;D:\WorkShop\github\TSGv3\TSG_CenterServer\..\TSG_NetWork\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\include;E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\..\PublicVar;E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\..\TSG_NetWork\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /external:I "C:/ProgramData/anaconda3/Library/include/qt" /external:I "C:/ProgramData/anaconda3/Library/include/qt/QtCore" /external:I "C:/ProgramData/anaconda3/Library/./mkspecs/win32-msvc" /external:I "C:/ProgramData/anaconda3/Library/include/qt/QtWidgets" /external:I "C:/ProgramData/anaconda3/Library/include/qt/QtGui" /external:I "C:/ProgramData/anaconda3/Library/include/qt/QtANGLE" /external:I "C:/ProgramData/anaconda3/Library/include/qt/QtNetwork"</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -134,10 +134,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_CORE_LIB;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\WorkShop\github\TSGv3\TSG_CenterServer\include;D:\WorkShop\github\TSGv3\TSG_CenterServer\..\PublicVar;D:\WorkShop\github\TSGv3\TSG_CenterServer\..\TSG_NetWork\header;C:\ProgramData\anaconda3\Library\include\qt;C:\ProgramData\anaconda3\Library\include\qt\QtCore;C:\ProgramData\anaconda3\Library\.\mkspecs\win32-msvc;C:\ProgramData\anaconda3\Library\include\qt\QtWidgets;C:\ProgramData\anaconda3\Library\include\qt\QtGui;C:\ProgramData\anaconda3\Library\include\qt\QtANGLE;C:\ProgramData\anaconda3\Library\include\qt\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\include;E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\..\PublicVar;E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\..\TSG_NetWork\header;C:\ProgramData\anaconda3\Library\include\qt;C:\ProgramData\anaconda3\Library\include\qt\QtCore;C:\ProgramData\anaconda3\Library\.\mkspecs\win32-msvc;C:\ProgramData\anaconda3\Library\include\qt\QtWidgets;C:\ProgramData\anaconda3\Library\include\qt\QtGui;C:\ProgramData\anaconda3\Library\include\qt\QtANGLE;C:\ProgramData\anaconda3\Library\include\qt\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\WorkShop\github\TSGv3\TSG_CenterServer\include;D:\WorkShop\github\TSGv3\TSG_CenterServer\..\PublicVar;D:\WorkShop\github\TSGv3\TSG_CenterServer\..\TSG_NetWork\header;C:\ProgramData\anaconda3\Library\include\qt;C:\ProgramData\anaconda3\Library\include\qt\QtCore;C:\ProgramData\anaconda3\Library\.\mkspecs\win32-msvc;C:\ProgramData\anaconda3\Library\include\qt\QtWidgets;C:\ProgramData\anaconda3\Library\include\qt\QtGui;C:\ProgramData\anaconda3\Library\include\qt\QtANGLE;C:\ProgramData\anaconda3\Library\include\qt\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\include;E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\..\PublicVar;E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\..\TSG_NetWork\header;C:\ProgramData\anaconda3\Library\include\qt;C:\ProgramData\anaconda3\Library\include\qt\QtCore;C:\ProgramData\anaconda3\Library\.\mkspecs\win32-msvc;C:\ProgramData\anaconda3\Library\include\qt\QtWidgets;C:\ProgramData\anaconda3\Library\include\qt\QtGui;C:\ProgramData\anaconda3\Library\include\qt\QtANGLE;C:\ProgramData\anaconda3\Library\include\qt\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -150,7 +150,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\WorkShop\github\TSGv3\TSG_CenterServer\include;D:\WorkShop\github\TSGv3\TSG_CenterServer\..\PublicVar;D:\WorkShop\github\TSGv3\TSG_CenterServer\..\TSG_NetWork\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\include;E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\..\PublicVar;E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\..\TSG_NetWork\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /external:I "C:/ProgramData/anaconda3/Library/include/qt" /external:I "C:/ProgramData/anaconda3/Library/include/qt/QtCore" /external:I "C:/ProgramData/anaconda3/Library/./mkspecs/win32-msvc" /external:I "C:/ProgramData/anaconda3/Library/include/qt/QtWidgets" /external:I "C:/ProgramData/anaconda3/Library/include/qt/QtGui" /external:I "C:/ProgramData/anaconda3/Library/include/qt/QtANGLE" /external:I "C:/ProgramData/anaconda3/Library/include/qt/QtNetwork"</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -170,10 +170,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_CORE_LIB;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\WorkShop\github\TSGv3\TSG_CenterServer\include;D:\WorkShop\github\TSGv3\TSG_CenterServer\..\PublicVar;D:\WorkShop\github\TSGv3\TSG_CenterServer\..\TSG_NetWork\header;C:\ProgramData\anaconda3\Library\include\qt;C:\ProgramData\anaconda3\Library\include\qt\QtCore;C:\ProgramData\anaconda3\Library\.\mkspecs\win32-msvc;C:\ProgramData\anaconda3\Library\include\qt\QtWidgets;C:\ProgramData\anaconda3\Library\include\qt\QtGui;C:\ProgramData\anaconda3\Library\include\qt\QtANGLE;C:\ProgramData\anaconda3\Library\include\qt\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\include;E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\..\PublicVar;E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\..\TSG_NetWork\header;C:\ProgramData\anaconda3\Library\include\qt;C:\ProgramData\anaconda3\Library\include\qt\QtCore;C:\ProgramData\anaconda3\Library\.\mkspecs\win32-msvc;C:\ProgramData\anaconda3\Library\include\qt\QtWidgets;C:\ProgramData\anaconda3\Library\include\qt\QtGui;C:\ProgramData\anaconda3\Library\include\qt\QtANGLE;C:\ProgramData\anaconda3\Library\include\qt\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\WorkShop\github\TSGv3\TSG_CenterServer\include;D:\WorkShop\github\TSGv3\TSG_CenterServer\..\PublicVar;D:\WorkShop\github\TSGv3\TSG_CenterServer\..\TSG_NetWork\header;C:\ProgramData\anaconda3\Library\include\qt;C:\ProgramData\anaconda3\Library\include\qt\QtCore;C:\ProgramData\anaconda3\Library\.\mkspecs\win32-msvc;C:\ProgramData\anaconda3\Library\include\qt\QtWidgets;C:\ProgramData\anaconda3\Library\include\qt\QtGui;C:\ProgramData\anaconda3\Library\include\qt\QtANGLE;C:\ProgramData\anaconda3\Library\include\qt\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\include;E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\..\PublicVar;E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\..\TSG_NetWork\header;C:\ProgramData\anaconda3\Library\include\qt;C:\ProgramData\anaconda3\Library\include\qt\QtCore;C:\ProgramData\anaconda3\Library\.\mkspecs\win32-msvc;C:\ProgramData\anaconda3\Library\include\qt\QtWidgets;C:\ProgramData\anaconda3\Library\include\qt\QtGui;C:\ProgramData\anaconda3\Library\include\qt\QtANGLE;C:\ProgramData\anaconda3\Library\include\qt\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -186,7 +186,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\WorkShop\github\TSGv3\TSG_CenterServer\include;D:\WorkShop\github\TSGv3\TSG_CenterServer\..\PublicVar;D:\WorkShop\github\TSGv3\TSG_CenterServer\..\TSG_NetWork\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\include;E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\..\PublicVar;E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\..\TSG_NetWork\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /external:I "C:/ProgramData/anaconda3/Library/include/qt" /external:I "C:/ProgramData/anaconda3/Library/include/qt/QtCore" /external:I "C:/ProgramData/anaconda3/Library/./mkspecs/win32-msvc" /external:I "C:/ProgramData/anaconda3/Library/include/qt/QtWidgets" /external:I "C:/ProgramData/anaconda3/Library/include/qt/QtGui" /external:I "C:/ProgramData/anaconda3/Library/include/qt/QtANGLE" /external:I "C:/ProgramData/anaconda3/Library/include/qt/QtNetwork"</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
@@ -205,10 +205,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_CORE_LIB;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\WorkShop\github\TSGv3\TSG_CenterServer\include;D:\WorkShop\github\TSGv3\TSG_CenterServer\..\PublicVar;D:\WorkShop\github\TSGv3\TSG_CenterServer\..\TSG_NetWork\header;C:\ProgramData\anaconda3\Library\include\qt;C:\ProgramData\anaconda3\Library\include\qt\QtCore;C:\ProgramData\anaconda3\Library\.\mkspecs\win32-msvc;C:\ProgramData\anaconda3\Library\include\qt\QtWidgets;C:\ProgramData\anaconda3\Library\include\qt\QtGui;C:\ProgramData\anaconda3\Library\include\qt\QtANGLE;C:\ProgramData\anaconda3\Library\include\qt\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\include;E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\..\PublicVar;E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\..\TSG_NetWork\header;C:\ProgramData\anaconda3\Library\include\qt;C:\ProgramData\anaconda3\Library\include\qt\QtCore;C:\ProgramData\anaconda3\Library\.\mkspecs\win32-msvc;C:\ProgramData\anaconda3\Library\include\qt\QtWidgets;C:\ProgramData\anaconda3\Library\include\qt\QtGui;C:\ProgramData\anaconda3\Library\include\qt\QtANGLE;C:\ProgramData\anaconda3\Library\include\qt\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\WorkShop\github\TSGv3\TSG_CenterServer\include;D:\WorkShop\github\TSGv3\TSG_CenterServer\..\PublicVar;D:\WorkShop\github\TSGv3\TSG_CenterServer\..\TSG_NetWork\header;C:\ProgramData\anaconda3\Library\include\qt;C:\ProgramData\anaconda3\Library\include\qt\QtCore;C:\ProgramData\anaconda3\Library\.\mkspecs\win32-msvc;C:\ProgramData\anaconda3\Library\include\qt\QtWidgets;C:\ProgramData\anaconda3\Library\include\qt\QtGui;C:\ProgramData\anaconda3\Library\include\qt\QtANGLE;C:\ProgramData\anaconda3\Library\include\qt\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\include;E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\..\PublicVar;E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\..\TSG_NetWork\header;C:\ProgramData\anaconda3\Library\include\qt;C:\ProgramData\anaconda3\Library\include\qt\QtCore;C:\ProgramData\anaconda3\Library\.\mkspecs\win32-msvc;C:\ProgramData\anaconda3\Library\include\qt\QtWidgets;C:\ProgramData\anaconda3\Library\include\qt\QtGui;C:\ProgramData\anaconda3\Library\include\qt\QtANGLE;C:\ProgramData\anaconda3\Library\include\qt\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -220,11 +220,11 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\WorkShop\github\TSGv3\TSG_CenterServer\CMakeLists.txt">
+    <CustomBuild Include="E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/WorkShop/github/TSGv3/TSG_CenterServer/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/Leventure/WorkShop/Github/TSGv3/TSG_CenterServer/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/WorkShop/github/TSGv3 -BD:/WorkShop/github/TSGv3/build --check-stamp-file D:/WorkShop/github/TSGv3/build/TSG_CenterServer/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Leventure/WorkShop/Github/TSGv3 -BE:/Leventure/WorkShop/Github/TSGv3/build --check-stamp-file E:/Leventure/WorkShop/Github/TSGv3/build/TSG_CenterServer/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -233,11 +233,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseArguments.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5\Qt5Config.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5\Qt5ConfigVersion.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5\Qt5ModuleLocation.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QPdfPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QSvgIconPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QSvgPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWebGLIntegrationPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\WorkShop\github\TSGv3\build\TSG_CenterServer\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Leventure\WorkShop\Github\TSGv3\build\TSG_CenterServer\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/WorkShop/github/TSGv3/TSG_CenterServer/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/Leventure/WorkShop/Github/TSGv3/TSG_CenterServer/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/WorkShop/github/TSGv3 -BD:/WorkShop/github/TSGv3/build --check-stamp-file D:/WorkShop/github/TSGv3/build/TSG_CenterServer/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Leventure/WorkShop/Github/TSGv3 -BE:/Leventure/WorkShop/Github/TSGv3/build --check-stamp-file E:/Leventure/WorkShop/Github/TSGv3/build/TSG_CenterServer/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -246,11 +246,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseArguments.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5\Qt5Config.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5\Qt5ConfigVersion.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5\Qt5ModuleLocation.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QPdfPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QSvgIconPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QSvgPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWebGLIntegrationPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\WorkShop\github\TSGv3\build\TSG_CenterServer\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Leventure\WorkShop\Github\TSGv3\build\TSG_CenterServer\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/WorkShop/github/TSGv3/TSG_CenterServer/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/Leventure/WorkShop/Github/TSGv3/TSG_CenterServer/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/WorkShop/github/TSGv3 -BD:/WorkShop/github/TSGv3/build --check-stamp-file D:/WorkShop/github/TSGv3/build/TSG_CenterServer/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Leventure/WorkShop/Github/TSGv3 -BE:/Leventure/WorkShop/Github/TSGv3/build --check-stamp-file E:/Leventure/WorkShop/Github/TSGv3/build/TSG_CenterServer/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -259,11 +259,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseArguments.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5\Qt5Config.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5\Qt5ConfigVersion.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5\Qt5ModuleLocation.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QPdfPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QSvgIconPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QSvgPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWebGLIntegrationPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\WorkShop\github\TSGv3\build\TSG_CenterServer\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Leventure\WorkShop\Github\TSGv3\build\TSG_CenterServer\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/WorkShop/github/TSGv3/TSG_CenterServer/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/Leventure/WorkShop/Github/TSGv3/TSG_CenterServer/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/WorkShop/github/TSGv3 -BD:/WorkShop/github/TSGv3/build --check-stamp-file D:/WorkShop/github/TSGv3/build/TSG_CenterServer/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Leventure/WorkShop/Github/TSGv3 -BE:/Leventure/WorkShop/Github/TSGv3/build --check-stamp-file E:/Leventure/WorkShop/Github/TSGv3/build/TSG_CenterServer/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -272,26 +272,25 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeParseArguments.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5\Qt5Config.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5\Qt5ConfigVersion.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5\Qt5ModuleLocation.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QPdfPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QSvgIconPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QSvgPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWebGLIntegrationPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\ProgramData\anaconda3\Library\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\WorkShop\github\TSGv3\build\TSG_CenterServer\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Leventure\WorkShop\Github\TSGv3\build\TSG_CenterServer\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\WorkShop\github\TSGv3\TSG_CenterServer\src\TSG_CenterServer.cpp" />
-    <ClCompile Include="D:\WorkShop\github\TSGv3\TSG_CenterServer\src\TSG_RegeditEditor.cpp" />
-    <ClCompile Include="D:\WorkShop\github\TSGv3\TSG_CenterServer\src\TSG_NetServer.cpp" />
-    <ClCompile Include="D:\WorkShop\github\TSGv3\TSG_CenterServer\src\MissionController.cpp" />
-    <ClCompile Include="D:\WorkShop\github\TSGv3\TSG_CenterServer\src\DeviceParamController.cpp" />
+    <ClCompile Include="E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\src\TSG_CenterServer.cpp" />
+    <ClCompile Include="E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\src\TSG_RegeditEditor.cpp" />
+    <ClCompile Include="E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\src\TSG_NetServer.cpp" />
+    <ClCompile Include="E:\Leventure\WorkShop\Github\TSGv3\TSG_CenterServer\src\MissionController.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\WorkShop\github\TSGv3\build\ZERO_CHECK.vcxproj">
-      <Project>{C9F5E25D-981A-3B1E-A8E9-B04E233EE689}</Project>
+    <ProjectReference Include="E:\Leventure\WorkShop\Github\TSGv3\build\ZERO_CHECK.vcxproj">
+      <Project>{2D7A2470-2C5D-30D0-9C44-282D5D89CBE5}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="D:\WorkShop\github\TSGv3\build\TSG_NetWork\TSG_NetWork.vcxproj">
-      <Project>{89AE65B9-EA40-34DE-B324-E3AD7ADB8F0C}</Project>
+    <ProjectReference Include="E:\Leventure\WorkShop\Github\TSGv3\build\TSG_NetWork\TSG_NetWork.vcxproj">
+      <Project>{CB4D6D7F-2F75-3502-B855-358E3C8D61E7}</Project>
       <Name>TSG_NetWork</Name>
     </ProjectReference>
   </ItemGroup>

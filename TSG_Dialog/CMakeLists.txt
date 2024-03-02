@@ -6,6 +6,7 @@ set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 project(${PROJECT_NAME})
 # 找到Qt相关的模块包
 find_package(Qt5 REQUIRED COMPONENTS Core)
+include_directories(../PublicVar)
 # 将源代码添加到此项目的可执行文件。
 add_library (TSG_Dialog "TSG_Dialog.cpp" "TSG_Dialog.h")
 # 链接Qt模块

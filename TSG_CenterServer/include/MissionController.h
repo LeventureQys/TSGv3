@@ -9,6 +9,9 @@
 /// 项目是必须要设置的，也就是某个地方的项目
 /// 任务是不一定需要设置的，可以自动生成，也可以手动设定，在不进行手动设置的时候都需要进行自动生成
 /// 任务的存在是中心化的，所有的任务管理都只存在于中心CentralMainService中，子设备不需要过多关心任务的模式本身，而是只需要知道他们需要做什么
+/// 
+/// 现在info.json除了用于存储任务本身的信息，还用于存储设备配置，统一在info.json中进行统一调配和控制
+/// 不存在更改单个设备的情况，只存在更改整个任务的情况
 /// </summary>
 
 class MissionController : public TSG_Framework {
@@ -71,6 +74,8 @@ private:
 	QString str_ApplicationPath;
 	QString str_CurrentMissionPath;
 	QMap<QString, MissionContent> map_MissionContent;
+
 	const QString str_classname = "MissionController";
 	QString currentMissionName = "";
 };
+

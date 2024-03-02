@@ -11,6 +11,9 @@
 #include <QFile>
 #include "qdatetime.h"
 #include "qobject.h"
+#include "TSG_Framework.h"
+
+
 
 // TODO: 在此处引用程序需要的其他标头。
 enum class ErrorType {
@@ -85,3 +88,4 @@ signals:
 	void Sig_WriteNormalMessage(const QString& ModuleName, const QString& FunctionName, const QString& NormalMessage);
 	void Sig_WriteTypeMessage(const QString& ModuleName, const QString& FunctionName, const QString& TypeMessage, const QString& Type);
 };
+

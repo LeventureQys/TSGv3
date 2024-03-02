@@ -11,6 +11,7 @@ endif()
 
 project ("TSGv3")
 # 包含子项目。
+add_subdirectory("DeviceSDK")
 add_subdirectory("TSG_CenterServer")
 add_subdirectory ("TSG_Dialog")
 add_subdirectory ("TSG_NetWork")

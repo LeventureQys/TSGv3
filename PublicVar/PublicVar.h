@@ -31,8 +31,10 @@ const QString Error = "Error";
 const QString TSG_Dialog = "TSG_Dialog";
 const QString TopMissionFolderName = "Mission";
 const QString DeviceParamFolderName = "Device";
+
+const QString SerialPort = "SerialPort";
 //设备类型
-enum class DeviceType {
+enum class ServerType {
 	MainService,
 	Device,
 	GUI
@@ -40,19 +42,19 @@ enum class DeviceType {
 
 //认证信息
 struct AuthorizeInfo {
-	DeviceType type = DeviceType::MainService;
+	ServerType type = ServerType::MainService;
 	QString ip = "";
 	qint16 port = 0;	//端口一般情况下不重要
 	QString DeviceName = "";
 	QString toString() {
 		QString type_ = "";
-		if (this->type == DeviceType::MainService) {
+		if (this->type == ServerType::MainService) {
 			type_ = "MainService";
 		}
-		else if (this->type == DeviceType::Device) {
+		else if (this->type == ServerType::Device) {
 			type_ = "Device";
 		}
-		else if (this->type == DeviceType::GUI) {
+		else if (this->type == ServerType::GUI) {
 			type_ = "GUI";
 		}
 
@@ -74,13 +76,13 @@ struct AuthorizeInfo {
 		QJsonObject obj = doc.object();
 		QString type_ = obj.value("type").toString();
 		if (type_ == "MainService") {
-			this->type = DeviceType::MainService;
+			this->type = ServerType::MainService;
 		}
 		else if (type_ == "Device") {
-			this->type = DeviceType::Device;
+			this->type = ServerType::Device;
 		}
 		else if (type_ == "GUI") {
-			this->type = DeviceType::GUI;
+			this->type = ServerType::GUI;
 		}
 		this->ip = obj.value("ip").toString();
 		this->port = obj.value("port").toInt();
@@ -88,86 +90,13 @@ struct AuthorizeInfo {
 	}
 };
 
-//任务内容
-struct MissionContent {
-	QString MissionName = "";		//任务名称
-	double Diameter = 5.4;			//隧道直径
-	qint32 OverlapRate = 20;		//重叠率
-	QString note;					//备注
-	qint32 jobCount = 0;			//作业次数
-	QDateTime CreateTime;			//创建时间
-	QDateTime LastWorkTime;			//最后作业时间
-	QString toString() const {
-		QJsonObject obj;
-		obj.insert("InfoType", "MissionContent");
-		QJsonObject obj_Content;
 
-		obj_Content.insert("Diameter", this->Diameter);
-		obj_Content.insert("OverlapRate", this->OverlapRate);
-		obj_Content.insert("note", this->note);
-		obj_Content.insert("jobCount", this->jobCount);
-		obj_Content.insert("CreateTime", this->CreateTime.toString("yyyy-MM-dd hh:mm:ss"));
-		obj_Content.insert("LastWorkTime", this->LastWorkTime.toString("yyyy-MM-dd hh:mm:ss"));
-
-		obj.insert("Content", obj_Content);
-		return QString::fromUtf8(QJsonDocument(obj).toJson(QJsonDocument::Compact));
-	}
-
-	bool fromJson(const QString& string) {
-		// 将 JSON 字符串解析为 QJsonDocument 对象
-		QJsonDocument jsonDoc = QJsonDocument::fromJson(string.toUtf8());
-		if (jsonDoc.isNull()) {
-			qWarning() << "Failed to parse JSON document.";
-			return false;
-		}
-
-		// 检查 JSON 对象是否符合预期的结构
-		if (!jsonDoc.isObject()) {
-			qWarning() << "JSON document is not an object.";
-			return false;
-		}
-
-		// 获取根 JSON 对象
-		QJsonObject jsonObj = jsonDoc.object();
-		if (!jsonObj.contains("InfoType") || jsonObj["InfoType"].toString() != "MissionContent") {
-			qWarning() << "JSON object is not of type 'MissionContent'.";
-			return false;
-		}
-
-		// 获取内容对象
-		QJsonObject contentObj = jsonObj["Content"].toObject();
-		if (contentObj.contains("MissionName")) {
-			MissionName = contentObj["MissionName"].toString();
-		}
-		// 从内容对象中读取数据并赋值给结构体成员
-		if (contentObj.contains("Diameter")) {
-			Diameter = contentObj["Diameter"].toDouble();
-		}
-		if (contentObj.contains("OverlapRate")) {
-			OverlapRate = contentObj["OverlapRate"].toInt();
-		}
-		if (contentObj.contains("note")) {
-			note = contentObj["note"].toString();
-		}
-		if (contentObj.contains("jobCount")) {
-			jobCount = contentObj["jobCount"].toInt();
-		}
-		if (contentObj.contains("CreateTime")) {
-			CreateTime = QDateTime::fromString(contentObj["CreateTime"].toString(), "yyyy-MM-dd hh:mm:ss");
-		}
-		if (contentObj.contains("LastWorkTime")) {
-			LastWorkTime = QDateTime::fromString(contentObj["LastWorkTime"].toString(), "yyyy-MM-dd hh:mm:ss");
-		}
-
-		return true;
-	}
-};    
 
 struct TrolleyParam {
 	bool blnDirection = true;		//true:正向，false:反向
 	qint32 speed = 1500;
 	qint32 nAnalyseMode = 0;		//0标准模式，1无处理模式
-	
+
 	QString toString() {
 		QJsonObject obj;
 		obj.insert("blnDirection", blnDirection);
@@ -181,7 +110,7 @@ struct TrolleyParam {
 		blnDirection = obj.value("blnDirection").toBool();
 		speed = obj.value("speed").toInt();
 		nAnalyseMode = obj.value("nAnalyseMode").toInt();
-		
+
 	}
 };
 
@@ -280,7 +209,7 @@ struct DeviceParam {
 	bool blnCamera = true;
 	bool blnScanner = true;
 
-	QString toString() {
+	QString toString() const {
 		QJsonObject obj;
 		obj.insert("InfoType", "DeviceParam");
 		obj.insert("DeviceParamsName", DeviceParamsName);
@@ -338,7 +267,7 @@ struct DeviceParam {
 			return false;
 		}
 
-		
+
 		qDebug() << obj;
 		DeviceParamsName = obj.value("DeviceParamsName").toString();
 		Creator = obj.value("Creator").toString();
@@ -370,6 +299,86 @@ struct DeviceParam {
 		scannerParam.vertAngleMax = obj_Scanner.value("vertAngleMax").toInt();
 		scannerParam.splitAfterLines = obj_Scanner.value("splitAfterLines").toInt();
 		scannerParam.numCols = obj_Scanner.value("numCols").toInt();
+		return true;
+	}
 
+};
+
+//任务内容
+struct MissionContent {
+	QString MissionName = "";		//任务名称
+	double Diameter = 5.4;			//隧道直径
+	qint32 OverlapRate = 20;		//重叠率
+	QString note;					//备注
+	qint32 jobCount = 0;			//作业次数
+	QDateTime CreateTime;			//创建时间
+	QDateTime LastWorkTime;			//最后作业时间
+	DeviceParam DeviceParam;		//设备详细信息
+	QString toString() const {
+		QJsonObject obj;
+		obj.insert("InfoType", "MissionContent");
+		QJsonObject obj_Content;
+
+		obj_Content.insert("Diameter", this->Diameter);
+		obj_Content.insert("OverlapRate", this->OverlapRate);
+		obj_Content.insert("note", this->note);
+		obj_Content.insert("jobCount", this->jobCount);
+		obj_Content.insert("CreateTime", this->CreateTime.toString("yyyy-MM-dd hh:mm:ss"));
+		obj_Content.insert("LastWorkTime", this->LastWorkTime.toString("yyyy-MM-dd hh:mm:ss"));
+		obj_Content.insert("DeviceParam", DeviceParam.toString());
+		obj.insert("Content", obj_Content);
+		return QString::fromUtf8(QJsonDocument(obj).toJson(QJsonDocument::Compact));
+	}
+
+	bool fromJson(const QString& string) {
+		// 将 JSON 字符串解析为 QJsonDocument 对象
+		QJsonDocument jsonDoc = QJsonDocument::fromJson(string.toUtf8());
+		if (jsonDoc.isNull()) {
+			qWarning() << "Failed to parse JSON document.";
+			return false;
+		}
+
+		// 检查 JSON 对象是否符合预期的结构
+		if (!jsonDoc.isObject()) {
+			qWarning() << "JSON document is not an object.";
+			return false;
+		}
+
+		// 获取根 JSON 对象
+		QJsonObject jsonObj = jsonDoc.object();
+		if (!jsonObj.contains("InfoType") || jsonObj["InfoType"].toString() != "MissionContent") {
+			qWarning() << "JSON object is not of type 'MissionContent'.";
+			return false;
+		}
+
+		// 获取内容对象
+		QJsonObject contentObj = jsonObj["Content"].toObject();
+		if (contentObj.contains("MissionName")) {
+			MissionName = contentObj["MissionName"].toString();
+		}
+		// 从内容对象中读取数据并赋值给结构体成员
+		if (contentObj.contains("Diameter")) {
+			Diameter = contentObj["Diameter"].toDouble();
+		}
+		if (contentObj.contains("OverlapRate")) {
+			OverlapRate = contentObj["OverlapRate"].toInt();
+		}
+		if (contentObj.contains("note")) {
+			note = contentObj["note"].toString();
+		}
+		if (contentObj.contains("jobCount")) {
+			jobCount = contentObj["jobCount"].toInt();
+		}
+		if (contentObj.contains("CreateTime")) {
+			CreateTime = QDateTime::fromString(contentObj["CreateTime"].toString(), "yyyy-MM-dd hh:mm:ss");
+		}
+		if (contentObj.contains("LastWorkTime")) {
+			LastWorkTime = QDateTime::fromString(contentObj["LastWorkTime"].toString(), "yyyy-MM-dd hh:mm:ss");
+		}
+
+		if (contentObj.contains("DeviceParam")) {
+			DeviceParam.fromJson(contentObj["DeviceParam"].toString());
+		}
+		return true;
 	}
 };

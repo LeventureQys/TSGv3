@@ -16,7 +16,6 @@ set(SOURCES
  src/TSG_RegeditEditor.cpp
  src/TSG_NetServer.cpp
  src/MissionController.cpp
- src/DeviceParamController.cpp
 )
 
 
@@ -27,5 +26,4 @@ target_link_libraries(TSG_CenterServer TSG_NetWork)
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET TSG_CenterServer PROPERTY CXX_STANDARD 20)
 endif()
-
 # TODO: 如有需要，请添加测试并安装目标。

@@ -53,7 +53,7 @@ void TSG_NetServer::SendMsg_GUI(const QByteArray& bytes)
 	if (!this->isOpen()) return;
 
 	for (auto item = this->map_Authorization.begin(); item != this->map_Authorization.end(); ++item) {
-		if (item.value().type == DeviceType::GUI) {
+		if (item.value().type == ServerType::GUI) {
 			this->ptr_server->SendMsg(bytes, item.key());
 		}
 	}

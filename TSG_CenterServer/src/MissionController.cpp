@@ -23,7 +23,7 @@ bool MissionController::Init(const QString& ApplicationPath)
 		//如果不存在Scan文件夹，则创建一个
 		if (!dir.mkpath(TopMissionFolderName)) {
 			this->CallErrorMessage("Init - Can't make a Scan folder");
-			return false ;
+			return false;
 		}
 		dir.cd(TopMissionFolderName);
 	}

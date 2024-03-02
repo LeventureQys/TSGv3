@@ -5,7 +5,7 @@ TSG_RegeditEditor::TSG_RegeditEditor(QObject* parent)
 	: QObject(parent)
 {
 	settings = new QSettings("South_Software", "TSG @Site");
-	this->map_default.insert("ServiceType", DefaultServiceType);
+	this->map_default.insert("DeviceType", DefaultServiceType);
 	this->map_default.insert("Language", English);
 	this->map_default.insert("IP", DefaultIP);
 	this->map_default.insert("Port", DefaultPort);
