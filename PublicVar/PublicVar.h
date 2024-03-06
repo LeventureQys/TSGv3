@@ -33,6 +33,19 @@ const QString TopMissionFolderName = "Mission";
 const QString DeviceParamFolderName = "Device";
 
 const QString SerialPort = "SerialPort";
+
+const QString MainProcess = "MainProcess";
+const QString DeviceManager = "DeviceManager";
+const QString AllDevices = "AllDevices";
+
+const QString MainSerialPort = "MainSerialPort";
+const QString HikCamera = "HikCamera";
+const QString FaroScanner = "FaroScanner";
+
+const QString UpDateSPState = "UpdateSPState";
+const QString UpdateSPBatteryUsage = "UpdateSPBatteryUsage";
+const QString UpdateSPMileage = "UpdateSPMileage";
+const QString UpdateDoubleMileage = "UpdateDoubleMileage";
 //设备类型
 enum class ServerType {
 	MainService,
@@ -311,6 +324,7 @@ struct MissionContent {
 	qint32 OverlapRate = 20;		//重叠率
 	QString note;					//备注
 	qint32 jobCount = 0;			//作业次数
+	QString jobPath;				//任务路径
 	QDateTime CreateTime;			//创建时间
 	QDateTime LastWorkTime;			//最后作业时间
 	DeviceParam DeviceParam;		//设备详细信息

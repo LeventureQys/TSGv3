@@ -4,6 +4,9 @@
     <ClCompile Include="E:\Leventure\WorkShop\Github\TSGv3\DeviceSDK\src\DeviceSDK.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="E:\Leventure\WorkShop\Github\TSGv3\DeviceSDK\src\MainServiceControll.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="E:\Leventure\WorkShop\Github\TSGv3\DeviceSDK\CMakeLists.txt" />

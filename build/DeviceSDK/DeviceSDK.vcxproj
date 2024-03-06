@@ -278,6 +278,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="E:\Leventure\WorkShop\Github\TSGv3\DeviceSDK\src\DeviceSDK.cpp" />
+    <ClCompile Include="E:\Leventure\WorkShop\Github\TSGv3\DeviceSDK\src\MainServiceControll.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="E:\Leventure\WorkShop\Github\TSGv3\build\ZERO_CHECK.vcxproj">

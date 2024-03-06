@@ -1,6 +1,7 @@
 #pragma once
 #include "qbytearray.h"
 #include "qobject.h"
+#include "PublicVar.h"
 /// <summary>
 /// SerialPortParams
 /// </summary>
@@ -102,6 +103,7 @@ namespace SPP {
 	const QByteArray type_InclinometerMessage = QByteArray::fromHex("EF");		 //倾角仪信息上传
 	const QByteArray type_ResetCloverPosition = QByteArray::fromHex("45");		//重设码盘中心位置
 	const QByteArray type_HardwareButtonInfomation = QByteArray::fromHex("fc");	//物理按键信息上传
+
 	//key: 功能码，value:帧长度
 
 	const QByteArray type_ZS_Mileage = QByteArray::fromHex("FE");
@@ -112,3 +114,14 @@ namespace SPP {
 	const QByteArray type_ZS_CameraEnable = QByteArray::fromHex("33");
 	const QByteArray type_ZS_StartGrapping = QByteArray::fromHex("32");
 }
+
+const QString centralPosition = "centralPosition";
+const QString taskMessage = "taskMessage";
+const QString FaroFileInfo = "FaroFileInfo";
+const QString Inclinometer = "Inclinometer";
+const QString mileage = "mileage";
+const QString scannerTime = "scannerTime";
+const QString singleMileage = "singleMileage";
+const QString IMU = "IMU";
+const QString strTab = "\t";
+

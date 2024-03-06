@@ -7,7 +7,7 @@
 class TSG_Framework : public QObject {
 	Q_OBJECT
 public:
-	TSG_Framework(QObject* parent, QString frameName) { this->str_framework = frameName; }
+	TSG_Framework(QObject* parent, const QString& frameName) { this->str_framework = frameName; }
 	~TSG_Framework() {}
 
 	void CallNormalMessage(const QString& NormalMessage) {
@@ -58,9 +58,9 @@ enum class DeviceType {
 /// 单独的设备管理模块，需要一些基础的功能
 /// </summary>
 template<class InitParam, class MissionParams>
-class TSG_Device {
+class TSG_Device :public TSG_Framework{
 public:
-	TSG_Device(const QString str_classname) {}
+	TSG_Device(QObject*parent,const QString& str_classname) : TSG_Framework(parent, str_classname) {}
 	~TSG_Device() {  };
 #pragma region 基础接口
 	/// <summary>

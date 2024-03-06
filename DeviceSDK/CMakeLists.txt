@@ -12,6 +12,7 @@ include_directories(../PublicVar)
 
 set(SOURCES 
  src/DeviceSDK.cpp
+ src/MainServiceControll.cpp
 )
 
 
