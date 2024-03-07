@@ -164,6 +164,8 @@ struct CameraParam {
 	}
 };
 struct ScannerParam {
+	int scanFileNum = 1;
+	QString scanBaseName = "Scan";
 	int resolution = 4;
 	int noiseCompression = 1;
 	int measurementRate = 8;
@@ -191,6 +193,8 @@ struct ScannerParam {
 		obj.insert("str_serialNumber", str_serialNumber);
 		obj.insert("str_scanKey", str_scanKey);
 		obj.insert("str_scanIP", str_scanIP);
+		obj.insert("scanFileNum", scanFileNum);
+		obj.insert("scanBaseName", scanBaseName);
 		return QJsonDocument(obj).toJson();
 	}
 	void FromString(const QString& strMessage) {

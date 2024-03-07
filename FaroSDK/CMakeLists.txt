@@ -7,7 +7,7 @@ project(DevicFaroSDKeSDK)
 # 找到Qt相关的模块包
 find_package(Qt5 REQUIRED COMPONENTS Core)
 # 将源代码添加到此项目的可执行文件。
-include_directories(${CMAKE_SOURCE_DIR}/FaroSDK/include)
+include_directories(include)
 include_directories(../PublicVar)
 include_directories(${CMAKE_SOURCE_DIR}/FaroSDK/libs)
 # 添加FaroSDK目录
