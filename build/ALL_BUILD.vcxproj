@@ -177,6 +177,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{2561A29E-008D-3BFA-8099-D2A334582327}</Project>
       <Name>DeviceSDK</Name>
     </ProjectReference>
+    <ProjectReference Include="E:\Leventure\WorkShop\Github\TSGv3\build\FaroSDK\FaroSDK.vcxproj">
+      <Project>{92663BFE-3D27-3375-B313-E9352F99F851}</Project>
+      <Name>FaroSDK</Name>
+    </ProjectReference>
     <ProjectReference Include="E:\Leventure\WorkShop\Github\TSGv3\build\TSG_CenterServer\TSG_CenterServer.vcxproj">
       <Project>{8B3E800F-4DAA-38D8-8D45-0D89420FA372}</Project>
       <Name>TSG_CenterServer</Name>

@@ -1,5 +1,7 @@
 E:/Leventure/WorkShop/Github/TSGv3/build/CMakeFiles/ALL_BUILD.dir
 E:/Leventure/WorkShop/Github/TSGv3/build/CMakeFiles/ZERO_CHECK.dir
+E:/Leventure/WorkShop/Github/TSGv3/build/FaroSDK/CMakeFiles/FaroSDK.dir
+E:/Leventure/WorkShop/Github/TSGv3/build/FaroSDK/CMakeFiles/ALL_BUILD.dir
 E:/Leventure/WorkShop/Github/TSGv3/build/DeviceSDK/CMakeFiles/DeviceSDK.dir
 E:/Leventure/WorkShop/Github/TSGv3/build/DeviceSDK/CMakeFiles/ALL_BUILD.dir
 E:/Leventure/WorkShop/Github/TSGv3/build/TSG_CenterServer/CMakeFiles/TSG_CenterServer.dir

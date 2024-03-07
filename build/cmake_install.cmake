@@ -34,6 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("E:/Leventure/WorkShop/Github/TSGv3/build/FaroSDK/cmake_install.cmake")
   include("E:/Leventure/WorkShop/Github/TSGv3/build/DeviceSDK/cmake_install.cmake")
   include("E:/Leventure/WorkShop/Github/TSGv3/build/TSG_CenterServer/cmake_install.cmake")
   include("E:/Leventure/WorkShop/Github/TSGv3/build/TSG_Dialog/cmake_install.cmake")

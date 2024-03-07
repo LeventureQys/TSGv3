@@ -186,6 +186,15 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 CMAKE_VERBOSE_MAKEFILE:BOOL=OFF
 
 //Value Computed by CMake
+DevicFaroSDKeSDK_BINARY_DIR:STATIC=E:/Leventure/WorkShop/Github/TSGv3/build/FaroSDK
+
+//Value Computed by CMake
+DevicFaroSDKeSDK_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+DevicFaroSDKeSDK_SOURCE_DIR:STATIC=E:/Leventure/WorkShop/Github/TSGv3/FaroSDK
+
+//Value Computed by CMake
 DeviceSDK_BINARY_DIR:STATIC=E:/Leventure/WorkShop/Github/TSGv3/build/DeviceSDK
 
 //Value Computed by CMake
@@ -196,6 +205,9 @@ DeviceSDK_LIB_DEPENDS:STATIC=general;Qt5::Core;
 
 //Value Computed by CMake
 DeviceSDK_SOURCE_DIR:STATIC=E:/Leventure/WorkShop/Github/TSGv3/DeviceSDK
+
+//Dependencies for the target
+FaroSDK_LIB_DEPENDS:STATIC=general;Qt5::Core;general;FARO.LS.SDK;general;iQOpen;
 
 //The directory containing a CMake configuration file for Qt5Core.
 Qt5Core_DIR:PATH=C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Core
@@ -357,7 +369,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MT
 CMAKE_MT-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //noop for ranlib
