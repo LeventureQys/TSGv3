@@ -2,9 +2,13 @@
   DeviceSDK.cpp
 E:\Leventure\WorkShop\Github\TSGv3\DeviceSDK\include\SerialParams.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 E:\Leventure\WorkShop\Github\TSGv3\PublicVar\PublicAlgorithm.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+E:\Leventure\WorkShop\Github\TSGv3\DeviceSDK\src\DeviceSDK.cpp(993,15): warning C4101: “i”: 未引用的局部变量
   MainServiceControll.cpp
 E:\Leventure\WorkShop\Github\TSGv3\DeviceSDK\src\MainServiceControll.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 E:\Leventure\WorkShop\Github\TSGv3\DeviceSDK\include\SerialParams.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 E:\Leventure\WorkShop\Github\TSGv3\PublicVar\PublicAlgorithm.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+E:\Leventure\WorkShop\Github\TSGv3\DeviceSDK\include\MainServiceControll.h(6,12): error C3646: “workstate”: 未知重写说明符
+E:\Leventure\WorkShop\Github\TSGv3\DeviceSDK\include\MainServiceControll.h(6,22): error C2059: 语法错误:“=”
+E:\Leventure\WorkShop\Github\TSGv3\DeviceSDK\include\MainServiceControll.h(6,24): error C2653: “WorkState”: 不是类或命名空间名称
+E:\Leventure\WorkShop\Github\TSGv3\DeviceSDK\include\MainServiceControll.h(6,42): error C2238: 意外的标记位于“;”之前
   正在生成代码...
-  DeviceSDK.vcxproj -> E:\Leventure\WorkShop\Github\TSGv3\build\DeviceSDK\Debug\DeviceSDK.lib

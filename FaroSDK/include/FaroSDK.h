@@ -23,14 +23,13 @@ public:
 	FaroController(QObject* obj);
 	~FaroController();
 
-	bool InitConnection(const MissionContent& mission);
+	bool InitConnection(const ScannerParam& mission);
 	bool setDeviceParam(const ScannerParam& param);
-
+	bool setMission(const MissionContent& mission);
 	bool StartMission();
 	bool PauseMission();
 	bool EndMission();
 private:
-
 	const QString str_classname = "FaroController";
 	HelicalRecordingStatus currentRecordingState = HelicalRecordingStatus::HRSUnknown;
 	MissionContent mission;
@@ -41,7 +40,6 @@ private:
 	QString missionPath = "";
 	const qint32 int_timeout_limit = 90;	//超时限制
 	QString str_pointcloudPath;
-
 
 	bool TryPingDevice(const ScannerParam& InitParam);
 	bool InitHandler(const ScannerParam& mission);
@@ -59,13 +57,11 @@ private:
 	/// </summary>
 	/// <returns></returns>
 	bool StartRecording();
-
 	/// <summary>
 	/// 暂停采集任务
 	/// </summary>
 	/// <returns></returns>
 	bool PauseRecording();
-
 	/// <summary>
 	/// 停止采集
 	/// </summary>

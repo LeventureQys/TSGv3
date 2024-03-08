@@ -16,6 +16,7 @@ enum class MainServiceType {
 	HS_VTM,			//车载设备
 	MS201			//三叶草码盘
 };
+
 class SerialPortInitParam {
 public:
 	void SetSerialPortType(MainServiceType type) {
@@ -28,20 +29,10 @@ public:
 	QSerialPortInfo serialInfo;
 };
 
-enum class WorkState {
-	WS_None,
-	WS_Init,
-	WS_PreStart,
-	WS_Start,
-	WS_Stop,
-	WS_Pause,
-	WS_Close
-};
 
 
 class serialPortState {
 public:
-
 	bool blnGrapping = false;
 	bool blnTrolleyRunning = false;
 	bool blnLight = false;
@@ -89,7 +80,6 @@ public:
 
 	serialPort(QObject* obj);
 	~serialPort();
-
 	/// <summary>
 	/// 初始化串口参数
 	/// </summary>
@@ -97,13 +87,6 @@ public:
 	/// <returns>初始化是否成功</returns>
 	bool InitSerialPort(const SerialPortInitParam& init);
 
-	/// <summary>
-	/// 提供消息码和消息体，对串口发送消息
-	/// </summary>
-	/// <param name="func">消息码</param>
-	/// <param name="body">消息体</param>
-	/// <returns>发送结果</returns>
-	bool writeCMD(const QByteArray& func, const QByteArray& body);
 	bool SetMission(const MissionContent& mission);
 	bool PrewarmMachine();	//机器预热
 	bool StartMission();	//开始任务
@@ -131,6 +114,7 @@ private:
 	const QString str_classname = "SerialPort";
 	SerialPortInitParam InitParams;
 	MissionContent mission;
+	SerialPortStatus status = SerialPortStatus::WS_None;
 	/// <summary>
 	/// 控制串口的指针
 	/// </summary>
@@ -189,6 +173,14 @@ private:
 
 	QString getBigEndFlt(const QByteArray& data);
 	QString getLittleEnd(const QByteArray& data);
+
+	/// <summary>
+/// 提供消息码和消息体，对串口发送消息
+/// </summary>
+/// <param name="func">消息码</param>
+/// <param name="body">消息体</param>
+/// <returns>发送结果</returns>
+	bool writeCMD(const QByteArray& func, const QByteArray& body);
 #pragma endregion
 
 

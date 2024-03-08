@@ -16,8 +16,6 @@ namespace SPP {
 		qint8 length;			//消息体长度
 	};
 
-
-
 	struct MileageData {
 		bool positive;
 		quint64 pulseCount;

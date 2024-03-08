@@ -14,6 +14,7 @@ include_directories(${CMAKE_SOURCE_DIR}/FaroSDK/libs)
 include_directories(lib)
 set(SOURCES 
  src/FaroSDK.cpp
+ src/FaroControl.cpp
 
 )
 

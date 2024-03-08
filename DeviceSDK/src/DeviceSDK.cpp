@@ -17,6 +17,12 @@ serialPort::~serialPort()
 
 bool serialPort::InitSerialPort(const SerialPortInitParam& init)
 {
+	if (this->status > WS_Status::WS_Initing) {
+		this->CallErrorMessage("InitSerialPort - SerialPort is Already initing");
+		return false;
+	}
+
+	this->status = WS_Status::WS_Initing;
 	this->InitParams = init;
 	this->m_serialPort = new QSerialPort(this);
 	this->m_serialPort->setPortName(init.serialInfo.portName());
@@ -24,6 +30,7 @@ bool serialPort::InitSerialPort(const SerialPortInitParam& init)
 	this->m_serialPort->setDataBits(QSerialPort::Data8);
 	this->m_serialPort->setParity(QSerialPort::NoParity);
 	this->m_serialPort->setStopBits(QSerialPort::OneStop);
+
 	if (this->m_serialPort->open(QIODevice::ReadWrite)) {
 		//这里不能做同步等待，因为串口的初始化是一个异步的过程
 		//绑定信号
@@ -31,6 +38,8 @@ bool serialPort::InitSerialPort(const SerialPortInitParam& init)
 		connect(this->m_serialPort, &QSerialPort::readyRead, this, &serialPort::CheckPortContains);
 	}
 	this->Init_map_LengthSp();
+
+	this->status = WS_Status::WS_Init;
 	return true;
 }
 
@@ -270,6 +279,7 @@ bool serialPort::SetMission(const MissionContent& mission)
 void serialPort::registFunctions()
 {
 }
+
 QByteArray serialPort::PositionToHexadecimal(const QList<qint32>& enabledCameras) {
 	// 创建一个初始值为0的两字节整数，表示相机使能位
 	quint16 cameraEnable = 0;
@@ -295,6 +305,7 @@ QByteArray serialPort::PositionToHexadecimal(const QList<qint32>& enabledCameras
 
 	return command;
 }
+
 QByteArray serialPort::int32ToLittleEndianHex(qint32 value, qint16 digitCount)
 {
 	QByteArray byteArray;
@@ -308,6 +319,7 @@ QByteArray serialPort::int32ToLittleEndianHex(qint32 value, qint16 digitCount)
 
 	return byteArray;
 }
+
 qint8 serialPort::processNumber(qint8 number) {
 	const qint8 minVal = 1;
 	const qint8 maxVal = 14;

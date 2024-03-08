@@ -103,6 +103,23 @@ struct AuthorizeInfo {
 	}
 };
 
+enum class WS_Status {
+	WS_None,
+	WS_Initing,
+	WS_Init,
+	WS_MissionSetting,
+	WS_MissionSet,
+	WS_PreStarting,
+	WS_PreStart,
+	WS_Starting,
+	WS_Start,
+	WS_Pausing,
+	WS_Pause,
+	WS_Stoping,
+	WS_Stop,
+	WS_Closeing,
+	WS_Close
+};
 
 
 struct TrolleyParam {
@@ -163,6 +180,7 @@ struct CameraParam {
 		ExposureTime = obj.value("ExposureTime").toDouble();
 	}
 };
+
 struct ScannerParam {
 	int scanFileNum = 1;
 	QString scanBaseName = "Scan";

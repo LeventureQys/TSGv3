@@ -1,5 +1,13 @@
 ﻿#include "FaroSDK.h"
 
+BSTR fromQString(const QString& string) {
+	return SysAllocString(reinterpret_cast<const OLECHAR*>(string.utf16()));
+}
+
+QString fromBSTR(BSTR string) {
+	return QString::fromUtf16(reinterpret_cast<const ushort*>(string));
+}
+
 FaroController::FaroController(QObject* obj) : TSG_Framework(obj, str_classname)
 {
 
@@ -10,22 +18,16 @@ FaroController::~FaroController()
 
 }
 
-bool FaroController::InitConnection(const MissionContent& mission)
+bool FaroController::InitConnection(const ScannerParam& mission)
 {
 	this->Status = FaroStatus::DEFAULT;
 	this->Status = FaroStatus::INITFAROING;
-
-
-	this->mission = mission;
-	this->param = mission.DeviceParam.scannerParam;
+	this->param = mission;
 	if (!TryPingDevice(this->param)) return false;
-
 	if (!InitHandler(this->param)) return false;
-
-
-
-
+	return true;
 }
+
 bool FaroController::TryPingDevice(const ScannerParam& InitParam)
 {
 	this->Status = FaroStatus::PINGING;
@@ -48,6 +50,7 @@ bool FaroController::TryPingDevice(const ScannerParam& InitParam)
 
 	return false;
 }
+
 bool FaroController::InitHandler(const ScannerParam& InitParam)
 {
 	if (this->Status < FaroStatus::PING)
@@ -149,13 +152,7 @@ bool FaroController::ConnectFaro()
 	}
 	return false;
 }
-BSTR fromQString(const QString& string) {
-	return SysAllocString(reinterpret_cast<const OLECHAR*>(string.utf16()));
-}
 
-QString fromBSTR(BSTR string) {
-	return QString::fromUtf16(reinterpret_cast<const ushort*>(string));
-}
 bool FaroController::setDeviceParam(const ScannerParam& param)
 {
 	if (this->Status < FaroStatus::CONNECT)
@@ -191,6 +188,13 @@ bool FaroController::setDeviceParam(const ScannerParam& param)
 		return true;
 	}
 	return false;
+}
+
+bool FaroController::setMission(const MissionContent& mission)
+{
+	this->mission = mission;
+	this->setDeviceParam(mission.DeviceParam.scannerParam);
+	return true;
 }
 
 bool FaroController::InitMission(const MissionContent& mission)
