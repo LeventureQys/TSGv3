@@ -283,7 +283,7 @@ bool FaroController::StartRecording()
 			count = 0;
 		}
 		this->scanCtrl->inquireRecordingStatus(&this->currentRecordingState);
-		if (this->currentRecordingState == HelicalRecordingStatus::HRSPaused) {
+		if (this->currentRecordingState == HelicalRecordingStatus::HRSRecording) {
 			this->Status = FaroStatus::RECORDFARO;
 			//此处法如正式开始采集，向上层返回开始采集成功
 
@@ -323,7 +323,6 @@ bool FaroController::PauseRecording()
 		if (this->currentRecordingState == HelicalRecordingStatus::HRSPaused) {
 			this->Status = FaroStatus::RECORDFARO;
 			//此处法如正式开始采集，向上层返回开始采集成功
-
 			return true;
 		}
 		qDebug() << "采集状态中：" << count << "s";
@@ -331,10 +330,64 @@ bool FaroController::PauseRecording()
 	}
 	return false;
 }
+
+bool FaroController::StopRecording()
+{
+	if (this->Status < FaroStatus::RECORDFARO)
+	{
+		this->CallErrorMessage("StopRecording - Not RECORDFARO Yet");
+		return false;
+	}
+	if (this->scanCtrl == nullptr) {
+		this->CallErrorMessage("StopRecording - scanCtrl is nullptr");
+		return false;
+	}
+
+	this->Status = FaroStatus::STOPFAROING;
+	qint32 count = 0;
+	qint32 int_reconnect_count = 0; //重连计数器
+	while (1) {
+		count++;
+		if (count > 44) {
+			if (int_reconnect_count > 5) return false;
+			//45秒后重连一次
+			this->scanCtrl->clearExceptions();
+			qint32 ret = this->scanCtrl->stopScan();
+			int_reconnect_count++;
+			count = 0;
+		}
+		this->scanCtrl->inquireRecordingStatus(&this->currentRecordingState);
+		if (this->currentRecordingState == HelicalRecordingStatus::HRSPaused) {
+			this->Status = FaroStatus::STOPFARO;
+			//此处法如结束采集
+			this->Status = FaroStatus::CONNECT;
+			return true;
+		}
+		qDebug() << "结束采集状态中：" << count << "s";
+		QThread::sleep(1);
+	}
+	return true;
+}
+
 qint32 FaroController::checkScanProgress()
 {
 	if (this->scanCtrl != nullptr)
 		return this->scanCtrl->ScanProgress;
 	else
 		return -1;
+}
+
+bool FaroController::StartMission()
+{
+	return this->StartRecording();
+}
+
+bool FaroController::PauseMission()
+{
+	return this->PauseRecording();
+}
+
+bool FaroController::EndMission()
+{
+	return this->StopRecording();
 }

@@ -26,8 +26,9 @@ public:
 	bool InitConnection(const MissionContent& mission);
 	bool setDeviceParam(const ScannerParam& param);
 
-	bool StartRecording();
-
+	bool StartMission();
+	bool PauseMission();
+	bool EndMission();
 private:
 
 	const QString str_classname = "FaroController";
@@ -47,7 +48,7 @@ private:
 	bool ResetHandler();
 	bool ConnectFaro();
 	bool InitMission(const MissionContent& mission);
-
+	qint32 checkScanProgress();
 	/// <summary>
 	/// 旋转镜头的操作，镜头需要启动旋转状态才允许进入到扫描模式中
 	/// </summary>
@@ -64,4 +65,10 @@ private:
 	/// </summary>
 	/// <returns></returns>
 	bool PauseRecording();
+
+	/// <summary>
+	/// 停止采集
+	/// </summary>
+	/// <returns></returns>
+	bool StopRecording();
 };
