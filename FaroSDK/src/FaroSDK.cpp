@@ -379,7 +379,12 @@ qint32 FaroController::checkScanProgress()
 
 bool FaroController::StartMission()
 {
-	return this->StartRecording();
+	if (!this->StartScanRotation()) return false;
+	if (!this->StartRecording()) {
+		this->StopRecording();
+		return false;
+	}
+	return true;
 }
 
 bool FaroController::PauseMission()
