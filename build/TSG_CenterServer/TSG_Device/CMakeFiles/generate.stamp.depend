@@ -1,9 +1,0 @@
-# CMake generation dependency list for this directory.
-C:/ProgramData/anaconda3/Library/lib/cmake/Qt5/Qt5Config.cmake
-C:/ProgramData/anaconda3/Library/lib/cmake/Qt5/Qt5ConfigVersion.cmake
-C:/ProgramData/anaconda3/Library/lib/cmake/Qt5/Qt5ModuleLocation.cmake
-C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Core/Qt5CoreConfig.cmake
-C:/ProgramData/anaconda3/Library/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake
-C:/ProgramData/anaconda3/Library/lib/cmake/Qt5SerialPort/Qt5SerialPortConfig.cmake
-C:/ProgramData/anaconda3/Library/lib/cmake/Qt5SerialPort/Qt5SerialPortConfigVersion.cmake
-E:/Leventure/WorkShop/Github/TSGv3/TSG_CenterServer/TSG_Device/CMakeLists.txt
