@@ -40,7 +40,4 @@ void  FaroControl::slot_UpdateStatus(const ScannerParam& param, FaroStatus statu
 
 		this->map_Faro.insert(param.str_serialNumber, this->map_Listening.value(param.str_serialNumber));
 	}
-
-
-
 }
