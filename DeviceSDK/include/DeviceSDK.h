@@ -29,8 +29,6 @@ public:
 	QSerialPortInfo serialInfo;
 };
 
-
-
 class serialPortState {
 public:
 	bool blnGrapping = false;
@@ -56,11 +54,28 @@ public:
 	qint32 nMileageID = 0;
 	SerialPortInitParam initParam;
 };
+//串口的控制状态机
+enum class WS_Status {
+	WS_None,
+	WS_Initing,
+	WS_Init,
+	WS_MissionSetting,
+	WS_MissionSet,
+	WS_PreStarting,
+	WS_PreStart,
+	WS_Starting,
+	WS_Start,
+	WS_Pausing,
+	WS_Pause,
+	WS_Stoping,
+	WS_Stop,
+	WS_Closeing,
+	WS_Close
+};
 
 /// <summary>
 /// 串口控制对象，专门用于控制串口的设备对象
 /// </summary>
-/// 
 using namespace SPP;
 //注册宏
 #define REG(byte,methodName)\
@@ -93,6 +108,9 @@ public:
 	bool PauseMission();	//暂停任务
 	bool EndMission();		//结束任务
 	bool AnalyseResult();	//分析结果 
+
+	WS_Status getStatus();
+
 Q_SIGNALS:
 	/// <summary>
 	/// 串口绑定成功的信号
@@ -114,7 +132,7 @@ private:
 	const QString str_classname = "SerialPort";
 	SerialPortInitParam InitParams;
 	MissionContent mission;
-	SerialPortStatus status = SerialPortStatus::WS_None;
+	WS_Status status = WS_Status::WS_None;
 	/// <summary>
 	/// 控制串口的指针
 	/// </summary>
@@ -129,6 +147,7 @@ private:
 	/// 发送测试命令
 	/// </summary>
 	serialPortState state;
+
 
 	void UpdateMessage(const QByteArray& code, const QList<QVariant>& obj);
 	//接到ReadyRead后的处理函数

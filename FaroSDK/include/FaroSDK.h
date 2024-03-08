@@ -29,6 +29,18 @@ public:
 	bool StartMission();
 	bool PauseMission();
 	bool EndMission();
+
+signals:
+	void Sig_InitConnection(const ScannerParam& mission);
+	void Sig_setDeviceParam(const ScannerParam& param);
+	void Sig_setMission(const MissionContent& mission);
+	void Sig_StartMission();
+	void Sig_PauseMission();
+	void Sig_EndMission();
+
+
+	void Sig_UpdateStatus(const ScannerParam& param, FaroStatus status);
+
 private:
 	const QString str_classname = "FaroController";
 	HelicalRecordingStatus currentRecordingState = HelicalRecordingStatus::HRSUnknown;
@@ -67,4 +79,6 @@ private:
 	/// </summary>
 	/// <returns></returns>
 	bool StopRecording();
+
+	void ChangeStatus(FaroStatus status);
 };

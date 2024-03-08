@@ -10,18 +10,25 @@ QString fromBSTR(BSTR string) {
 
 FaroController::FaroController(QObject* obj) : TSG_Framework(obj, str_classname)
 {
-
+	connect(this, &FaroController::Sig_InitConnection, this, &FaroController::InitConnection);
+	connect(this, &FaroController::Sig_setDeviceParam, this, &FaroController::setDeviceParam);
+	connect(this, &FaroController::Sig_setMission, this, &FaroController::setMission);
+	connect(this, &FaroController::Sig_StartMission, this, &FaroController::StartMission);
+	connect(this, &FaroController::Sig_PauseMission, this, &FaroController::PauseMission);
+	connect(this, &FaroController::Sig_EndMission, this, &FaroController::EndMission);
 }
 
 FaroController::~FaroController()
 {
-
+	this->ResetHandler();
+	CoUninitialize();
 }
 
 bool FaroController::InitConnection(const ScannerParam& mission)
 {
-	this->Status = FaroStatus::DEFAULT;
-	this->Status = FaroStatus::INITFAROING;
+	this->ChangeStatus(FaroStatus::DEFAULT);
+	this->ChangeStatus(FaroStatus::INITFAROING);
+
 	this->param = mission;
 	if (!TryPingDevice(this->param)) return false;
 	if (!InitHandler(this->param)) return false;
@@ -58,7 +65,7 @@ bool FaroController::InitHandler(const ScannerParam& InitParam)
 		this->CallErrorMessage("InitHandler - Can't go through ping section");
 		return false;
 	}
-	this->Status = FaroStatus::INITSDKING;
+	this->ChangeStatus(FaroStatus::INITSDKING);
 
 	if (InitParam.str_connectType.isEmpty() || InitParam.str_scanIP.isEmpty() || InitParam.str_scanKey.isEmpty() || InitParam.str_serialNumber.isEmpty())
 	{
@@ -85,7 +92,7 @@ bool FaroController::InitHandler(const ScannerParam& InitParam)
 		liPtr->License = licenseCode;
 		scanCtrl = static_cast<IScanCtrlSDKPtr>(liPtr);
 		this->CallNormalMessage("InitHandler - ServiceInitSuccess");
-		this->Status = FaroStatus::INITSDK;
+		this->ChangeStatus(FaroStatus::INITSDK);
 	}
 	catch (...)
 	{
@@ -106,9 +113,7 @@ bool FaroController::ResetHandler()
 		scanCtrl->Release();
 		scanCtrl = nullptr;
 	}
-
-	this->Status = FaroStatus::DEFAULT;
-
+	this->ChangeStatus(FaroStatus::DEFAULT);
 	return true;
 }
 
@@ -125,7 +130,7 @@ bool FaroController::ConnectFaro()
 		return false;
 	}
 	if (this->scanCtrl->Connected) {
-		this->Status = FaroStatus::CONNECT;
+		this->ChangeStatus(FaroStatus::CONNECT);
 		return true;
 	}
 
@@ -221,6 +226,7 @@ bool FaroController::InitMission(const MissionContent& mission)
 		}
 	}
 	this->str_pointcloudPath = temp_pointcloudPath;
+	return true;
 }
 
 bool FaroController::StartScanRotation()
@@ -234,8 +240,7 @@ bool FaroController::StartScanRotation()
 		this->CallErrorMessage("StartScanRotation - scanCtrl is nullptr");
 		return false;
 	}
-
-	this->Status = FaroStatus::RUNCAMING;
+	this->ChangeStatus(FaroStatus::RUNCAMING);
 	qint32 ret = this->scanCtrl->startScan();
 	qint32 count = 0;
 	qint32 int_reconnect_count = 0; //重连计数器
@@ -252,7 +257,7 @@ bool FaroController::StartScanRotation()
 		this->scanCtrl->inquireRecordingStatus(&this->currentRecordingState);
 		if (this->currentRecordingState == HelicalRecordingStatus::HRSPaused) {
 			this->scanCtrl->pauseScan();
-			this->Status = FaroStatus::RUNCAM;
+			this->ChangeStatus(FaroStatus::RUNCAM);
 			return true;
 		}
 		qDebug() << "开始旋转：" << count << "s";
@@ -272,7 +277,7 @@ bool FaroController::StartRecording()
 		this->CallErrorMessage("StartRecording - scanCtrl is nullptr");
 		return false;
 	}
-	this->Status = FaroStatus::RECORDFAROING;
+	this->ChangeStatus(FaroStatus::RECORDFAROING);
 	qint32 ret = this->scanCtrl->recordScan();
 	qint32 count = 0;
 	qint32 int_reconnect_count = 0; //重连计数器
@@ -288,7 +293,7 @@ bool FaroController::StartRecording()
 		}
 		this->scanCtrl->inquireRecordingStatus(&this->currentRecordingState);
 		if (this->currentRecordingState == HelicalRecordingStatus::HRSRecording) {
-			this->Status = FaroStatus::RECORDFARO;
+			this->ChangeStatus(FaroStatus::RECORDFARO);
 			//此处法如正式开始采集，向上层返回开始采集成功
 
 			return true;
@@ -310,7 +315,7 @@ bool FaroController::PauseRecording()
 		this->CallErrorMessage("PauseRecording - scanCtrl is nullptr");
 		return false;
 	}
-	this->Status = FaroStatus::PAUSEFARPING;
+	this->ChangeStatus(FaroStatus::PAUSEFARPING);
 	qint32 count = 0;
 	qint32 int_reconnect_count = 0; //重连计数器
 	while (1) {
@@ -325,7 +330,7 @@ bool FaroController::PauseRecording()
 		}
 		this->scanCtrl->inquireRecordingStatus(&this->currentRecordingState);
 		if (this->currentRecordingState == HelicalRecordingStatus::HRSPaused) {
-			this->Status = FaroStatus::RECORDFARO;
+			this->ChangeStatus(FaroStatus::RECORDFARO);
 			//此处法如正式开始采集，向上层返回开始采集成功
 			return true;
 		}
@@ -347,7 +352,7 @@ bool FaroController::StopRecording()
 		return false;
 	}
 
-	this->Status = FaroStatus::STOPFAROING;
+	this->ChangeStatus(FaroStatus::STOPFAROING);
 	qint32 count = 0;
 	qint32 int_reconnect_count = 0; //重连计数器
 	while (1) {
@@ -362,9 +367,8 @@ bool FaroController::StopRecording()
 		}
 		this->scanCtrl->inquireRecordingStatus(&this->currentRecordingState);
 		if (this->currentRecordingState == HelicalRecordingStatus::HRSPaused) {
-			this->Status = FaroStatus::STOPFARO;
-			//此处法如结束采集
-			this->Status = FaroStatus::CONNECT;
+			this->ChangeStatus(FaroStatus::STOPFARO);
+			this->ChangeStatus(FaroStatus::CONNECT);
 			return true;
 		}
 		qDebug() << "结束采集状态中：" << count << "s";
@@ -399,4 +403,10 @@ bool FaroController::PauseMission()
 bool FaroController::EndMission()
 {
 	return this->StopRecording();
+}
+
+void FaroController::ChangeStatus(FaroStatus status)
+{
+	this->Status = status;
+	emit this->Sig_UpdateStatus(this->param, this->Status);
 }

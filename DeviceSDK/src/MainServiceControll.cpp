@@ -127,7 +127,6 @@ bool MainServiceControll::SearchSerialPorts()
 		port->InitSerialPort(param);
 		this->map_listeners.insert(param.serialInfo.portName(), port);
 	}
-
 	mutex.unlock();
 	return true;
 }

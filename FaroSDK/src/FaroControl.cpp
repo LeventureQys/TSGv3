@@ -10,22 +10,37 @@ FaroControl::~FaroControl()
 bool FaroControl::Init(FaroParam param)
 {
 	for (auto item : param.list_faros) {
-		FaroController* pFaro = nullptr;
-		pFaro = new FaroController(this);
-		if (!pFaro->InitConnection(item)) {
-			//如果初始化失败，则释放所有资源，同时返回false
-			if (this->list_pFaro.size() > 0) {
-				for (qint32 i = 0; i < this->list_pFaro.size(); i++)
-				{
-					FaroController* faro = this->list_pFaro[i];
-					delete faro;
-					//delete this->list_pFaro[i];
-				}
-			}
+		FaroThread* faro_thread = nullptr;
+		faro_thread = new FaroThread();
+		faro_thread->faro = new FaroController(this);
+		faro_thread->thread = new QThread(this);
+
+		faro_thread->faro->moveToThread(faro_thread->thread);
+		faro_thread->thread->start();
+		connect(faro_thread->faro, &FaroController::Sig_UpdateStatus, this, &FaroControl::slot_UpdateStatus);
+
+		this->map_Listening.insert(item.str_serialNumber, faro_thread);
+	}
+	return true;
+}
+
+void  FaroControl::slot_UpdateStatus(const ScannerParam& param, FaroStatus status) {
+	//来自设备的更新状态
+
+	if (status == FaroStatus::INITSDK) {
+		if (!this->map_Listening.contains(param.str_serialNumber)) {
+			//不存在设备则直接跳出
+			return;
 		}
+
+		if (this->map_Faro.contains(param.str_serialNumber)) {
+			//如果已经是Init的了，那么就不需要再次初始化了
+			return;
+		}
+
+		this->map_Faro.insert(param.str_serialNumber, this->map_Listening.value(param.str_serialNumber));
 	}
 
 
 
-	return false;
 }

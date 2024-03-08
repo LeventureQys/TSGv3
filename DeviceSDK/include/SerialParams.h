@@ -13,7 +13,7 @@ namespace SPP {
 		QByteArray type;		//消息头
 		QByteArray contain;		//消息体
 		QByteArray crc;			//CRC校验体
-		qint8 length;			//消息体长度
+		qint8 length = 0;			//消息体长度
 	};
 
 	struct MileageData {

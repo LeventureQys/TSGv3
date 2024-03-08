@@ -1,62 +1,74 @@
-#include "FaroSDK.h"
+ï»¿#include "FaroSDK.h"
 
 class FaroParam {
 public:
 	QList<ScannerParam> list_faros;
 };
 
-class FaroControl : public TSG_Device<FaroParam,MissionContent> {
+/// <summary>
+/// æ¯ä¸€ä¸ªFaroè®¾å¤‡éœ€è¦ä¸€ä¸ªå•ç‹¬çš„çº¿ç¨‹æ¥æ§åˆ¶
+/// </summary>
+struct FaroThread {
+	QThread* thread = nullptr;
+	FaroController* faro = nullptr;
+	FaroStatus status = FaroStatus::DEFAULT;
+};
+
+class FaroControl : public TSG_Device<FaroParam, MissionContent> {
 
 	Q_OBJECT
+
 public:
+
 	FaroControl(QObject* parent, const QString& frameName);
+
 	~FaroControl();
 
 	/// <summary>
-/// ³õÊ¼»¯Éè±¸¶ÔÏó£¬ÓĞµÄÉè±¸¿ÉÄÜĞèÒªÊÖ¶¯ÊäÈëÒ»¸ö³õÊ¼»¯²ÎÊı£¬µ«ÊÇÒ»°ãµÄÉè±¸²»ĞèÒª£¬¿´Çé¿ö¶ø¶¨
-/// </summary>
-/// <param name="param">³õÊ¼»¯²ÎÊı</param>
-/// <returns>³õÊ¼»¯ÊÇ·ñ³É¹¦</returns>
-	 bool Init(FaroParam param);
-
-	/// <summary>
-	/// ÉèÖÃÈÎÎñ²ÎÊı
+	/// åˆå§‹åŒ–è®¾å¤‡å¯¹è±¡ï¼Œæœ‰çš„è®¾å¤‡å¯èƒ½éœ€è¦æ‰‹åŠ¨è¾“å…¥ä¸€ä¸ªåˆå§‹åŒ–å‚æ•°ï¼Œä½†æ˜¯ä¸€èˆ¬çš„è®¾å¤‡ä¸éœ€è¦ï¼Œçœ‹æƒ…å†µè€Œå®š
 	/// </summary>
-	/// <param name="param">ÈÎÎñ²ÎÊı</param>
-	/// <returns>ÉèÖÃÈÎÎñÊÇ·ñ³É¹¦</returns>
-	 bool SettingMission(MissionContent mission);
-
+	/// <param name="param">åˆå§‹åŒ–å‚æ•°</param>
+	/// <returns>åˆå§‹åŒ–æ˜¯å¦æˆåŠŸ</returns>
+	bool Init(FaroParam param);
 	/// <summary>
-	/// Ô¤ÈÈ»úÆ÷£¬Èç¹û»úÆ÷ĞèÒªÔ¤ÈÈ£¬ÔòĞèÒªÊµÏÖÕâ¸öº¯Êı
+	/// è®¾ç½®ä»»åŠ¡å‚æ•°
 	/// </summary>
-	/// <returns>Ô¤ÈÈ¹¤×÷ÊÇ·ñ³É¹¦</returns>
-	 bool PrewarmMachine();
-
+	/// <param name="param">ä»»åŠ¡å‚æ•°</param>
+	/// <returns>è®¾ç½®ä»»åŠ¡æ˜¯å¦æˆåŠŸ</returns>
+	bool SettingMission(MissionContent mission);
 	/// <summary>
-	/// ÕıÊ½¿ªÊ¼ÈÎÎñ£¬ÕıÊ½µØ¿ªÊ¼²É¼¯
+	/// é¢„çƒ­æœºå™¨ï¼Œå¦‚æœæœºå™¨éœ€è¦é¢„çƒ­ï¼Œåˆ™éœ€è¦å®ç°è¿™ä¸ªå‡½æ•°
 	/// </summary>
-	/// <returns>¿ªÊ¼ÈÎÎñÊÇ·ñ³É¹¦</returns>
-	 bool StartMission();
-
+	/// <returns>é¢„çƒ­å·¥ä½œæ˜¯å¦æˆåŠŸ</returns>
+	bool PrewarmMachine();
 	/// <summary>
-	/// ÔİÍ£ÈÎÎñ
+	/// æ­£å¼å¼€å§‹ä»»åŠ¡ï¼Œæ­£å¼åœ°å¼€å§‹é‡‡é›†
 	/// </summary>
-	/// <returns>ÔİÍ£½á¹û</returns>
-	 bool PauseMission();
-
+	/// <returns>å¼€å§‹ä»»åŠ¡æ˜¯å¦æˆåŠŸ</returns>
+	bool StartMission();
 	/// <summary>
-	/// Í£Ö¹ÈÎÎñ
+	/// æš‚åœä»»åŠ¡
 	/// </summary>
-	/// <returns>Í£Ö¹ÈÎÎñ½á¹û</returns>
-	 bool EndMission();
-
+	/// <returns>æš‚åœç»“æœ</returns>
+	bool PauseMission();
 	/// <summary>
-	/// Í£Ö¹ÈÎÎñÖ®ºóµÄÒ»¸ö½×¶Î£¬ÓÃÓÚ´¦Àí½á¹û
+	/// åœæ­¢ä»»åŠ¡
+	/// </summary>
+	/// <returns>åœæ­¢ä»»åŠ¡ç»“æœ</returns>
+	bool EndMission();
+	/// <summary>
+	/// åœæ­¢ä»»åŠ¡ä¹‹åçš„ä¸€ä¸ªé˜¶æ®µï¼Œç”¨äºå¤„ç†ç»“æœ
 	/// </summary>
 	/// <returns></returns>
-	 bool AnalyseResult();
+	bool AnalyseResult();
+
+private slots:
+	void slot_UpdateStatus(const ScannerParam& param, FaroStatus status);
 
 private:
-	QList<FaroController*> list_pFaro;
+	//ç­‰å¾…
+	QMap<QString, FaroThread*> map_Listening;
+	QMap<QString, FaroThread*> map_Faro;
+
 };
 

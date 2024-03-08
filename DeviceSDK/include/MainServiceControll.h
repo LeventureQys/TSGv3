@@ -3,10 +3,13 @@
 class MainServiceParam {
 public:
 	MainServiceType type = MainServiceType::MS101;
-	WorkState workstate = WorkState::WS_None;
 	QString ApplicationPath;
 };
-
+struct SerialPortThread {
+	QThread* thread = nullptr;
+	serialPort* port = nullptr;
+	SerialPortInitParam* param = nullptr;
+};
 class MainServiceControll :public TSG_Device<MainServiceParam, MissionContent> {
 
 	Q_OBJECT

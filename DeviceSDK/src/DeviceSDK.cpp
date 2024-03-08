@@ -77,7 +77,7 @@ void serialPort::ProcessBuffer()
 	}
 }
 
-SerialMessage serialPort::splitMessage(const QByteArray& message)
+SPP::SerialMessage serialPort::splitMessage(const QByteArray& message)
 {
 	QByteArray example = message;
 	qDebug() << "##example : " << example.toHex(' ') << "PortName" << this->InitParams.serialInfo.portName();
@@ -272,8 +272,20 @@ bool serialPort::writeCMD(const QByteArray& func, const QByteArray& body)
 
 bool serialPort::SetMission(const MissionContent& mission)
 {
+	//未初始化的设备不允许设置任务
+	if (this->status < WS_Status::WS_Init) {
+		this->CallErrorMessage("SetMission - SerialPort is not init yet");
+		return false;
 
-	return false;
+	}
+
+	this->status = WS_Status::WS_MissionSetting;
+
+	//设置任务细节
+
+	this->status = WS_Status::WS_MissionSet;
+
+	return true;
 }
 
 void serialPort::registFunctions()
@@ -989,11 +1001,77 @@ void serialPort::UpdateMessage(const QByteArray& code, const QList<QVariant>& ob
 
 bool serialPort::PrewarmMachine()
 {
-	return false;
+	if (this->status < WS_Status::WS_MissionSet) {
+		this->CallErrorMessage("PrewarmMachine - SerialPort is not Set Mission");
+		return false;
+	}
+
+	this->status = WS_Status::WS_PreStarting;
+
+
+	//初始化预热设备
+
+	this->status = WS_Status::WS_PreStart;
+
+	return true;
+}
+
+bool serialPort::StartMission()
+{
+	if (this->status < WS_Status::WS_PreStart) {
+		this->CallErrorMessage("PrewarmMachine - SerialPort is not WS_PreStart");
+		return false;
+	}
+
+	this->status = WS_Status::WS_Starting;
+
+
+	//初始化预热设备
+
+	this->status = WS_Status::WS_Start;
+
+	return true;
+}
+
+bool serialPort::PauseMission()
+{
+	if (this->status < WS_Status::WS_Start) {
+		this->CallErrorMessage("PrewarmMachine - SerialPort is not WS_Start to PauseMission");
+		return false;
+	}
+
+	this->status = WS_Status::WS_Pausing;
+
+
+	//初始化预热设备
+
+	this->status = WS_Status::WS_Pause;
+
+	return true;
+}
+
+bool serialPort::EndMission()
+{
+	if (this->status < WS_Status::WS_Start) {
+		this->CallErrorMessage("PrewarmMachine - SerialPort is not WS_Start to StopMission");
+		return false;
+	}
+
+	this->status = WS_Status::WS_Stoping;
+
+
+	//初始化预热设备
+
+	this->status = WS_Status::WS_Stop;
+
+	return true;
+}
+
+bool serialPort::AnalyseResult() {
+	return true;
 }
 
 QByteArray serialPort::CRC32_4_imu(const QByteArray& ba) {
-	unsigned int i;
 	unsigned int crc = 0xFFFFFFFF;		//4字节CRC
 	int len = ba.size();
 
@@ -1086,4 +1164,9 @@ void serialPort::getIMUMessage(const QByteArray& data)
 	ret.append(imu_data.id);
 
 	this->UpdateMessage(type_ZS_IMU, ret);
+}
+
+WS_Status serialPort::getStatus()
+{
+	return this->status;
 }
